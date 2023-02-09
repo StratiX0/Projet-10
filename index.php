@@ -49,59 +49,6 @@
                 </div>
             </div>
             <?php
-        }
-        else
-        {
-
-        }
-        
-        // include 'LE FICHIER QUE TU VEUX AFFICHER ENTRE LA NAV ET LE FOOTER QUAND TU ES CO'
-      
-        
-    }
-    else
-    {
-
-        
-            ?>
-        <div class="container">
-            <img src="./assets/loginphoto.png" class="img-login" alt="Gaming Campus Photo" /><span></span>
-            <form class="form-info" method="POST" action="login.php">
-                <h5 class="connexion-title">CONNEXION</h5>
-                    <div class="form-input">
-                    <!------------------------------------------- Email --------------------------------------------->
-                        <div class="mb-3">
-                            <img src="./assets/envelope-fill.svg" class="input-icon" alt="logo-mail">
-                            <input type="email"	class="form-email form-control" id="InputEmail" name="email"      placeholder="Adresse Mail"/>
-                        </div>
-                        <!---------------------------------------- Mot de Passe ----------------------------------------->
-                        <div class="mb-3">
-                        <input type="password" name="pass" placeholder="Mot de Passe" class="form-control" id="InputPassword"/>
-                        </div>
-                        <!------------------------------------------- Code ---------------------------------------------->
-                        <div class="mb-3">
-                            <input type="text" placeholder="Code" class="form-control" id="InputPassword1" name="code"/>
-                        </div>
-                    </div>
-                    <div class="form-option">
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="Check" />
-                            <label class="form-check-label" for="Check">Restez connecté</label>
-                        </div>
-                    <div class="forgotten-password">
-                        <a class="forgotten-btn" href="#">Mot de passe oublié?</a>
-                    </div>
-                </div>
-                <button name="submit" class="btn btn-primary">Me connecter</button>
-            </form>
-        </div>
-
-
-      <?php
-        }
-    ?>
-
-    <?php
         require_once('config/constants.php');
         $info = new takeinfo($conn);
         $art = $info->getArticle(1);
@@ -134,6 +81,60 @@
         }
         include 'partials/footer.php';
     ?>
+            <?php
+        }
+        else
+        {
+
+        }
+        
+        // include 'LE FICHIER QUE TU VEUX AFFICHER ENTRE LA NAV ET LE FOOTER QUAND TU ES CO'
+      
+        
+    }
+    else
+    {
+
+        
+            ?>
+        <div class="container">
+            <img src="./assets/loginphoto.png" class="img-login" alt="Gaming Campus Photo" /><span></span>
+            <form class="form-info" method="POST" action="login.php">
+                <h5 class="connexion-title">CONNEXION</h5>
+                    <div class="form-input">
+                    <!------------------------------------------- Email --------------------------------------------->
+                        <div class="mb-3">
+                            <img src="./assets/envelope-fill.svg" class="input-icon" alt="logo-mail">
+                            <input type="email"	class="form-email form-control" id="inputEmail" name="email" placeholder="Adresse Mail"/>
+                        </div>
+                        <!---------------------------------------- Mot de Passe ----------------------------------------->
+                        <div class="mb-3">
+                        <input type="password" name="pass" placeholder="Mot de Passe" class="form-control" id="inputPassword"/>
+                        </div>
+                        <!------------------------------------------- Code ---------------------------------------------->
+                        <div class="mb-3">
+                            <input type="text" placeholder="Code" class="form-control" id="inputPassword1" name="code"/>
+                        </div>
+                    </div>
+                    <div class="form-option">
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="check" />
+                            <label class="form-check-label" for="check">Restez connecté</label>
+                        </div>
+                    <div class="forgotten-password">
+                        <a class="forgotten-btn" href="#">Mot de passe oublié?</a>
+                    </div>
+                </div>
+                <button name="submit" class="btn btn-primary">Me connecter</button>
+            </form>
+        </div>
+
+
+      <?php
+        }
+    ?>
+
+    
         
 
 

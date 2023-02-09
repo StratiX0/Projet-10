@@ -131,8 +131,8 @@
 	margin-right: 6em;
 }
 
-.form-email {
-	padding-left: 2rem;
+#inputEmail {
+	padding-left: 30px;
 }
 
 .input-icon {
