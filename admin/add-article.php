@@ -12,7 +12,8 @@ if(isset($_POST['send']) && $_POST['send'] == 'Envoyer')
     //si les champs sont corrects, alors intégration en bdd : 
     
     $query = $conn->prepare("SET FOREIGN_KEY_CHECKS = 0;
-    INSERT INTO `article` VALUES (':id_article', ':id_auteur', ':titre_article', ':description_article', ':image_article', ':classe_article', ':article_texte', ':date_publication', ':mots_cles_article', ':categorie_article', ':like_article');
+    INSERT INTO `article`(`id_article`, `id_auteur`, `titre_article`, `description_article`, `image_article`, `classe_article`, `article_texte`, `date_publication`, `mots_cles_article`, `categorie_article`, `like_article`) 
+    VALUES (':id_article', ':id_auteur', ':titre_article', ':description_article', ':image_article', ':classe_article', ':article_texte', ':date_publication', ':mots_cles_article', ':categorie_article', ':like_article');
     SET FOREIGN_KEY_CHECKS=1;");
 
     $query->execute(array(
@@ -20,7 +21,7 @@ if(isset($_POST['send']) && $_POST['send'] == 'Envoyer')
         ':id_auteur' => null, 
         ':titre_article' => $_POST['titre_article'], 
         ':description_article'=> $_POST['description_article'], 
-        ':image_article' => null, 
+        ':image_article' => $_POST['image'], 
         ':classe_article' => $_POST['classe'], 
         ':article_texte' => $_POST['texte_article'], 
         ':date_publication' => null, 
