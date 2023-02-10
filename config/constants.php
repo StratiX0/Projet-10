@@ -1,6 +1,6 @@
 <?php
 
-define('ROOT_URL', 'http://localhost/gcnews/');
+define('ROOT_URL', 'http://gcnews.alwaysdata.net/');
 define('DB_HOST', 'mysql-gcnews.alwaysdata.net');
 define('DB_USERNAME', 'gcnews');
 define('DB_PASSWORD', '359D655A');
@@ -22,10 +22,10 @@ class takeinfo {
     function __construct($db){
         $this->db = $db;
     }
-    function getArticle($art){
+    function getArticle(){
         $idauthor = "SELECT * FROM article a INNER JOIN user u ON a.id_auteur = u.id_user";
         $stm = $this->db->prepare($idauthor);
-        $stm->execute(array($art));
+        $stm->execute(array());
         return $stm->fetchAll();
     }
 }

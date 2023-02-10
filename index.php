@@ -51,7 +51,7 @@
             <?php
         require_once('config/constants.php');
         $info = new takeinfo($conn);
-        $art = $info->getArticle(1);
+        $art = $info->getArticle();
         foreach ($art as $article)
         {
     ?>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="image-art">
                     <!-- PROPRIETE DE L'IMAGE A REMPLACE, C'EST UN PLACEHOLDER -->
-                    <img src="<?php echo $article['titre_article']; ?>" alt="Image <?php echo $article['mots_cles_article']; ?>">
+                    <img src="<?php echo $article['image_article']; ?>" alt="Image <?php echo $article['mots_cles_article']; ?>">
                 </div>
                 <div class="date-art">
                     <p>Publié le <?php echo $article['date_publication']; ?></p>
