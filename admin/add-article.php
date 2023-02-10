@@ -27,8 +27,11 @@ if(isset($_POST['send']) && $_POST['send'] == 'Envoyer')
         ':date_publication' => null, 
         ':mots_cles_article' => null, 
         ':categorie_article' => $_POST['cat'], 
-        ':like_article' =>  null,
+        ':like_article' => null,
     ));
+    echo '<pre>';
+    print_r($_POST['titre_article']);
+    echo '</pre>';
 }
 
 ?>
@@ -44,7 +47,7 @@ if(isset($_POST['send']) && $_POST['send'] == 'Envoyer')
         <meta name="viewport" content="width=device-width, initial-scale=1">
     
         
-        <!----------------------------------- POLICES UTILISEES -------------------------------------------------------->
+        <!----------------------------------- POLICES UTILISEES --------------------------------------------------------->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -72,23 +75,23 @@ if(isset($_POST['send']) && $_POST['send'] == 'Envoyer')
 <!----------------------------------------MAIN CONTENT--------------------------------------------------------->
 
     <!-- TITRE DE PAGE -->
-    <h2 class="title-admin">BIENVENUE</h2>
+    <h2 class="title-admin">BIENVENUE ANTHONY</h2>
 
     <!-- CARTES -->
 
     <div class="container">
-        <form method="post" action="" enctype="multipart/form-data">
+        <form method="POST" action="" enctype="multipart/form-data">
 
             <!-- TITRE -->
             <div class="title-input">
                 <label for="titre"><h5>Titre</h5></label>
-                <input type="text" class="titre" id="titre" placeholder="Maximum 150 caractères." name="titre_article">
+                <input type="text" class="titre" id="titre" name="titre_article">
             </div>
 
             <!-- DESCRIPTION -->
             <div class="des-input">
                 <label for="comment"><h5>Description</h5></label>
-                <textarea class="form-control" rows="5" id="comment" name="description_article"></textarea>
+                <input class="form-control" id="comment" name="description_article"></input>
             </div>
 
             <div class="text-input">
@@ -98,7 +101,7 @@ if(isset($_POST['send']) && $_POST['send'] == 'Envoyer')
 
             <div class="row">
                 <!-- SUJET -->
-                <div class = "col-md-auto m-5">
+                <div class = "col-md-auto mx-5">
                 <div class = "cat-input">
                     <label for="cat"><h5>Catégorie :</h5></label>
                         <select id="cat" name="cat" name="subject">

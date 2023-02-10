@@ -1,13 +1,35 @@
 
 /* ---------------------------ADD ARTICLE------------------------------------- */
 
+
+.m-5 {
+    margin: 0rem!important;
+    margin-top: 0rem;
+    margin-right: 0rem;
+    margin-bottom: 0rem;
+    margin-left: 0rem;
+}
+
+.des-input {
+    margin-bottom : 10px;
+}
+
+.title-input h5 {
+    padding-right :30px;
+}
+
+.title-input input {
+    width: 1000px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
 .img-input {
     margin-top: 30px;
 }
   
-.submit-btn button {
+.submit-btn input {
     background-color: rgb(76, 64, 179);
-    margin-top : 100px;
     margin-left: 450px;
     color: #fafafa;
     height: 50px;
@@ -20,7 +42,6 @@
 
 .submit-btn button:hover {
     background-color: rgb(109, 98, 211);
-    margin-top : 100px;
     margin-left: 450px;
     color: #fafafa;
     height: 50px;
